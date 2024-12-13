@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://getbootstrap.com/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+  <main class="container-fluid">
+    <div class="bg-body-tertiary p-5 rounded">
+      <h1>{{m}}/{{y}}</h1>
+        
+      <ul class="list-group">
+        {% for n in news %}
+        <li class="list-group-item">{{n.ndate}}: {{n.title}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </main>
+</body>
+</html>

@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from myapp.views import home,search
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('<int:year>/<int:month>/<int:day>/',home),
+    path('',search),
 ]
